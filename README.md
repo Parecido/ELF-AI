@@ -1,4 +1,4 @@
-# Machine Learning the Quantum Topology of Chemical Bonds
+## Machine Learning the Quantum Topology of Chemical Bonds
 
 This repository contains the data processing pipelines, machine-learning workflows, and production model used in the study:
 
