@@ -166,9 +166,7 @@ best_validation = None
 combinations = list(itertools.product(alpha, fit_intercept, positive))
 for combination in combinations:
     print(f"[LR] Starting: {combination}")
-    a = combination[0]
-    fi = combination[1]
-    p = combination[2]
+    a, fi, p = combination
     metrics = train_L2(a, fi, p, X, y, df["bond"])
 
     if metrics[0][1] < best_score_mean:
@@ -196,9 +194,7 @@ best_validation = None
 combinations = list(itertools.product(num_leaves, learning_rate, max_depth))
 for combination in combinations:
     print(f"[RF] Starting: {combination}")
-    nl = combination[0]
-    lr = combination[1]
-    md = combination[2]
+    nl, lr, md = combination
     metrics = train_random_forest(nl, lr, md, X, y, df["bond"])
 
     if metrics[0][1] < best_score_mean:
@@ -226,9 +222,7 @@ best_validation = None
 combinations = list(itertools.product(neurons, dropouts, learning_rates))
 for combination in combinations:
     print(f"[NN] Starting: {combination}")
-    n = combination[0]
-    lr = combination[1]
-    dr = combination[2]
+    n, dr, lr = combination
     metrics = train_neural_network(n, lr, dr, X, y, df["bond"])
 
     if metrics[0][1] < best_score_mean:
