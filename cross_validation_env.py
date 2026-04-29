@@ -99,9 +99,7 @@ best_validation = None
 combinations = list(itertools.product(num_leaves, learning_rate, max_depth))
 for combination in combinations:
     print(f"[RF] Starting: {combination}")
-    nl = combination[0]
-    lr = combination[1]
-    md = combination[2]
+    nl, lr, md = combination
     metrics = train_random_forest(nl, lr, md, X, y, df["bond"])
 
     if metrics[0][1] < best_score_mean:
