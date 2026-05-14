@@ -74,6 +74,6 @@ Trains the final production model using the full dataset and saves it to the `mo
 python production_model_env.py
 ```
 
-## Preprint
+## Publication
 
-A preprint of this work is available on [ChemRxiv](https://doi.org/10.26434/chemrxiv-2025-zljl9).
+A published version of this work is available on [PCCP](https://pubs.rsc.org/en/content/articlelanding/2026/cp/d6cp00029k).
